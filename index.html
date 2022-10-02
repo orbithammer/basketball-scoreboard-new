@@ -1,0 +1,54 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sideClm">
+                <h3 class="title">HOME</h3>
+                <div class="back" id="home-back">
+                    <h1 class="score" id="home-el"></h1>   
+                </div>
+                <div class="btn-row">
+                    <button class="scoreBtn" onclick="homePlusOne()">+1</button>
+                    <button class="scoreBtn" onclick="homePlusTwo()">+2</button>
+                    <button class="scoreBtn" onclick="homePlusThree()">+3</button>
+                </div>
+                <div class="statsClm">
+                    <h4 class="subtitle">FOULS</h4>
+                    <div class="foulsBack">
+                        <h2 class="stat" id="home-fouls-el"></h2>
+                    </div>
+                    <button class="statsBtn" onclick="homeFoulsPlusOne()">+1</button>
+                </div>
+            </div> <!-- end side column -->
+            <div class="statsClm">
+                <h4 class="subtitle">PERIOD</h4>
+                <div class="periodBack">
+                    <h2 class="stat" id="period-el"></h2>
+                </div>
+                <button class="statsBtn" onclick="periodPlusOne()">+1</button>
+                <button class="statsBtn" id="reset-btn" onclick="reset()">RESET</button>
+            </div> <!-- end stats column -->
+            <div class="sideClm">
+                <h3 class="title">GUEST</h3>
+                <div class="back" id="guest-back">
+                    <h1 class="score" id="guest-el"></h1>   
+                </div>
+                <div class="btn-row">
+                    <button class="scoreBtn" onclick="guestPlusOne()">+1</button>
+                    <button class="scoreBtn" onclick="guestPlusTwo()">+2</button>
+                    <button class="scoreBtn" onclick="guestPlusThree()">+3</button>
+                </div>
+                <div class="statsClm">
+                    <h4 class="subtitle">FOULS</h4>
+                    <div class="foulsBack">
+                        <h2 class="stat" id="guest-fouls-el"></h2>
+                    </div>
+                    <button class="statsBtn" onclick="guestFoulsPlusOne()">+1</button>
+                </div>
+            </div> <!-- end side column -->
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
