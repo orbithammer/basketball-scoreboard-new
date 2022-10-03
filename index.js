@@ -17,9 +17,15 @@ guestFoulsEl.textContent = guestFouls
 function handlePoints(points, isHome) {
     if (isHome) {
         homeScore += points
+        if (homeScore > 99) {
+            homeScore = 0
+        }
         homeEl.textContent = homeScore
     } else {
         guestScore += points
+        if (guestScore > 99) {
+            guestScore = 00
+        }
         guestEl.textContent = guestScore
     }
     leaderHighlight()
@@ -36,9 +42,15 @@ function periodPlusOne() {
 function foulsPlusOne(isHome) {
     if (isHome) {
         homeFouls++
+        if (homeFouls > 99) {
+            homeFouls = 00
+        }
         homeFoulsEl.textContent = homeFouls
     } else {
         guestFouls++
+        if (guestFouls > 99) {
+            guestFouls = 00
+        }
         guestFoulsEl.textContent = guestFouls
     }
 }
