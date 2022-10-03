@@ -14,39 +14,14 @@ periodEl.textContent = period
 homeFoulsEl.textContent = homeFouls
 guestFoulsEl.textContent = guestFouls
 
-function homePlusOne() {
-    homeScore++
-    homeEl.textContent = homeScore 
-    leaderHighlight()
-}
-
-function guestPlusOne() {
-    guestScore++
-    guestEl.textContent = guestScore  
-    leaderHighlight()  
-}
-
-function homePlusTwo() {
-    homeScore += 2
-    homeEl.textContent = homeScore
-    leaderHighlight()
-}
-
-function guestPlusTwo() {
-    guestScore += 2
-    guestEl.textContent = guestScore
-    leaderHighlight()
-}
-
-function homePlusThree() {
-    homeScore += 3
-    homeEl.textContent = homeScore
-    leaderHighlight()
-}
-
-function guestPlusThree() {
-    guestScore += 3
-    guestEl.textContent = guestScore
+function handlePoints(points, isHome) {
+    if (isHome) {
+        homeScore += points
+        homeEl.textContent = homeScore
+    } else {
+        guestScore += points
+        guestEl.textContent = guestScore
+    }
     leaderHighlight()
 }
 
@@ -58,14 +33,14 @@ function periodPlusOne() {
     periodEl.textContent = period
 }
 
-function homeFoulsPlusOne() {
-    homeFouls++
-    homeFoulsEl.textContent = homeFouls
-}
-
-function guestFoulsPlusOne() {
-    guestFouls++
-    guestFoulsEl.textContent = guestFouls
+function foulsPlusOne(isHome) {
+    if (isHome) {
+        homeFouls++
+        homeFoulsEl.textContent = homeFouls
+    } else {
+        guestFouls++
+        guestFoulsEl.textContent = guestFouls
+    }
 }
 
 function reset() {
